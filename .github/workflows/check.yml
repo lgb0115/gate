@@ -50,7 +50,6 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
-          # 自动开启 GitHub Pages，替代原有的 curl 脚本，避免接口权限报错
           enablement: true
 
       - name: Upload Pages artifact
@@ -63,4 +62,4 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Show site URL
-        run: echo "部署状态: ${{ steps.deployment.outcome }} | 访问地址: ${{ steps.deployment.outputs.page_url }}"
+        run: 'echo "部署状态: ${{ steps.deployment.outcome }} | 访问地址: ${{ steps.deployment.outputs.page_url }}"'
