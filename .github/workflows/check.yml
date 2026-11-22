@@ -60,15 +60,15 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
+      
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'public'
-
+          path: public
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
       - name: Show site URL
-        run: 'echo "site: https://jerylihub.github.io/gate/ (deploy outcome: ${{ steps.deployment.outcome }})"'
+        run: 'echo "site: https://lgb0115.github.io/gate/ (deploy outcome: ${{ steps.deployment.outcome }})"'
